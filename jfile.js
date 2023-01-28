@@ -1,21 +1,16 @@
-//Main function for the map
+// Initialize and add the map
 function initMap() {
+    // The location of Uluru
+    const uluru = { lat: -25.344, lng: 131.031 };
+    // The map, centered at Uluru
     const map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 14.7,
-      //Centered on UNT campus (google coordinates)
-      center: { lat: 33.208, lng: -97.156 },
+      zoom: 4,
+      center: uluru,
     });
-    //Recycling symbol
-    const image = {
-      url: "https://static-00.iconduck.com/assets.00/black-universal-recycling-symbol-emoji-256x256-lbi4lgap.png",
-      scaledSize: new google.maps.Size(20, 20)
-      };
-    //Recycling placement and size
-    const recycleMarker = new google.maps.Marker({
-      position: { lat: 33.208, lng: -97.156 },
-      map,
-      icon: image,
-      scaledSize: new google.maps.Size(1, 1),
+    // The marker, positioned at Uluru
+    const marker = new google.maps.Marker({
+      position: uluru,
+      map: map,
     });
   }
   
