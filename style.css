@@ -1,5 +1,14 @@
-/* Set the size of the div element that contains the map */
+html{
+  box-sizing: border-box;
+  font-size: 100%;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
 #map {
-    height: 400px; /* The height is 400 pixels */
-    width: 100%; /* The width is the width of the web page */
-  }
+  height: 60vh;
+}
